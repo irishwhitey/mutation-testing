@@ -22,6 +22,11 @@ jobs:
         run: dotnet test .\MutationTesting\MutationTesting.sln --no-restore --verbosity normal
       - name: install stryker
         run: dotnet tool install -g dotnet-stryker
+      - name: directory
+        run: cd .\MutationTesting\Tests\
+      - name: run stryker
+        run: dotnet stryker 
+        
 
   gated-via-environment:
     runs-on: windows-latest
