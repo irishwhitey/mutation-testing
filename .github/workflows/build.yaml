@@ -17,9 +17,9 @@ jobs:
       - name: Install dependencies
         run: dotnet restore .\MutationTesting\MutationTesting.sln
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build .\MutationTesting\MutationTesting.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test .\MutationTesting\MutationTesting.sln --no-restore --verbosity normal
   gated-via-environment:
     runs-on: windows-latest
     environment : prod-gate
