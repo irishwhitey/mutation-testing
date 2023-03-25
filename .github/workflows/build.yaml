@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: windwos-latest
+    runs-on: windows-latest
     steps:
       - id: step1
         run: echo "test=hello" >> "$GITHUB_OUTPUT"
