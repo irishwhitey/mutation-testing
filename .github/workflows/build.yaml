@@ -10,4 +10,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - id: step1
-        run: echo "test=hello" >> "$GITHUB_OUTPUT"
+        run: echo 'build job-> step 1'
+  gated-via-environment:
+    runs-on: windows-latest
+    environment : prod-gate
+    steps:
+      - id: step1
+        run: echo 'gated job -> step 1'
