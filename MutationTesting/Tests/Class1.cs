@@ -1,5 +1,4 @@
-﻿using System.Dynamic;
-using Xunit;
+﻿using Xunit;
 
 namespace Tests;
 
