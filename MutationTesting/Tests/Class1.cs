@@ -17,4 +17,11 @@ public class Class1
         int result = new Calculator().Add(10,2);
         Assert.Equal(8,result);
     }
+    
+    [Fact]
+    public void SimpleTest3()
+    {
+        int result = new Calculator().Add(2,2);
+        Assert.Equal(8,result);
+    }
 }
